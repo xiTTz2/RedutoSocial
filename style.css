@@ -1,0 +1,47 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: Helvetica;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+}
+
+.menu {
+    width: 100%;
+}
+
+.menu>.slogan-menu {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: orange;
+}
+
+.menu>.slogan-menu>h4 {
+    color: white;
+    font-family: 'Lucida Sans';
+    font-weight: lighter;
+    letter-spacing: 3px;
+}
+
+.menu>.submenu {
+    width: 100%;
+    padding: 15px;
+    background-color: black;
+}
+
+/*
+header {
+    width: 100%;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+} */
