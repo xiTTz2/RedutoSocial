@@ -71,17 +71,19 @@ header {
 }
 
 .img1{
-    background-image: url("img/imagem1.jfif");
+    background-position: 0px -300px;
+    background-image: url("assets/img/restaurantefoto2/fotofundo3.jpeg");
 }
 
 
 .img2{
-    background-image: url("img/imagem2.jfif");
+    background-image: url("assets/img/restaurantefoto1/fotofundo2.jpeg");
 }
 
 
 .img3{
-    background-image: url("img/imagem3.webp");
+    background-position: 0px -400px;
+    background-image: url("assets/img/restaurantefoto1/fotofundo1.jpeg");
 }
 
 @font-face {
@@ -95,6 +97,7 @@ header {
     text-shadow: 2px 2px 6px  black;
     font-size: 66px; 
     font-family: Antara_Distance;
+    
     color: white;
     display: flex;
     position: fixed;
@@ -119,6 +122,74 @@ header {
     width: 500%;
     height: 300px;
     display: flex;
+}
+
+/* PARTE DE AVALIACAO DO GOOGLE */
+#review-head{
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#review-head > img{
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+.cards-review{
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'Lucida Sans';
+    font-weight: lighter;
+    display: grid;
+    width: 300px;
+    height: 150px;
+    border-radius:10px ;
+    box-shadow: 0px 0px 10px 2px black;
+    margin-right: 50px;
+    margin-left:  50px;
+    position: relative;
+}
+ 
+.cards-review > p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: center;
+}
+
+.cards-review > img{
+    top: -20px;
+    display: flex;
+    position: relative;
+    width: 150px;
+    height: 30px;
+    display: flex;
+}
+
+.review-body{
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    height:200px;
+    font-weight: lighter;
+}
+
+.review-google{
+    display:table-cell;
+    animation: entrada1 350ms ease-in;
+    width: 400%;
+    height: 600px;
+
 }
 
 
