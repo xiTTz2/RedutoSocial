@@ -127,7 +127,7 @@ header {
 /* PARTE DE AVALIACAO DO GOOGLE */
 #review-head{
     height: 100px;
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -166,10 +166,10 @@ header {
 
 .cards-review > img{
     top: -20px;
-    display: flex;
+    width: 100%;
     position: relative;
-    width: 150px;
     height: 30px;
+    justify-content: center;
     display: flex;
 }
 
@@ -187,7 +187,7 @@ header {
 .review-google{
     display:table-cell;
     animation: entrada1 350ms ease-in;
-    width: 400%;
+    width: 100%;
     height: 600px;
 
 }
