@@ -5,13 +5,19 @@
     text-decoration: none;
     font-family: Helvetica;
     box-sizing: border-box;
-    overflow: hidden;
+    /* overflow: hidden; */
+    overflow-x: hidden;
 }
+
+@font-face {
+    font-family: AntaraDistance;
+    src: url(assets/font/aAntaraDistance.otf);
+}
+
 
 body {
 
-    width: 100vw;
-    height: 100vh;
+    background-color: rgb(240, 238, 238);
 }
 
 /* MENU E OUTRAS COISAS DA PARTE SUPERIOR DO SITE */
@@ -25,7 +31,7 @@ body {
     width: 100%;
     padding: 10px;
     text-align: center;
-    background-color: orange;
+    background-color: rgb(230, 150, 2);
 
 }
 
@@ -56,76 +62,67 @@ header {
 
 /* PARTE PRINCIPAL DE ENTRADA DO SITE*/
 .imagem {
-    box-shadow: inset 1px 1px 10px 5px   black;
-    width: 100vw;
-    height: 300px;
-    border: solid 1px;
-    display: table-cell;
+    box-shadow: inset 1px 1px 10px 5px black;
+    display: inline;
     animation: alterar 16s infinite ease;
     background-repeat: no-repeat;
     background-size: cover;
-    /* background-image: url("img/imagem1.jfif"); */
-
-
-
+    width: 100vw;
+    height: 100%;
 }
 
-.img1{
-    background-position: 0px -300px;
+.img1 {
+    
     background-image: url("assets/img/restaurantefoto2/fotofundo3.jpeg");
 }
 
 
-.img2{
+.img2 {
+
+
     background-image: url("assets/img/restaurantefoto1/fotofundo2.jpeg");
 }
 
 
-.img3{
-    background-position: 0px -400px;
-    background-image: url("assets/img/restaurantefoto1/fotofundo1.jpeg");
+.img3 {
+   
+
+    background-image: url("assets/img/restaurantefoto1/fotofundo3.jpeg");
 }
 
-@font-face {
-    font-family: Antara_Distance;
-    src: url(assets/aAntaraDistance.otf);
-}
-
-.titulo{
+.titulo {
     opacity: 0.7;
-    filter:  blur(0.70px);
-    text-shadow: 2px 2px 6px  black;
-    font-size: 66px; 
-    font-family: Antara_Distance;
-    
+    filter: blur(0.70px);
+    text-shadow: 2px 2px 6px black;
+    font-size: 100px;
     color: white;
-    display: flex;
-    position: fixed;
-    z-index: 1;
     width: 100%;
-    height: 300px;
-    justify-content: center;
     align-items: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    z-index: 1;
+    font-family: AntaraDistance;
 }
 
 .principal {
-
+    overflow: hidden;
     animation: entrada1 400ms ease;
-    width: 500%;
-    height: 300px;
-    display: flex;
-
+    width: 600%;
+    height: 500px;
 }
 
 .container {
-
-    width: 500%;
-    height: 300px;
+    overflow: hidden;
     display: flex;
+
+    width: 100%;
+    height: 500px;
 }
 
 /* PARTE DE AVALIACAO DO GOOGLE */
-#review-head{
+#review-head {
     height: 100px;
     width: 100vw;
     display: flex;
@@ -133,65 +130,147 @@ header {
     align-items: center;
 }
 
-#review-head > img{
+#review-head>img {
     margin-right: 15px;
     width: 40px;
     height: 40px;
 }
 
-.cards-review{
-    align-content: center;
+
+.cards-review {
     align-items: center;
     justify-content: center;
+    display: flex;
     flex-wrap: wrap;
-    font-family: 'Lucida Sans';
-    font-weight: lighter;
-    display: grid;
     width: 300px;
-    height: 150px;
-    border-radius:10px ;
+    height: 200px;
+    font-family: 'Lucida Sans';
+    border-radius: 10px;
+    padding: 30px;
     box-shadow: 0px 0px 10px 2px black;
-    margin-right: 50px;
-    margin-left:  50px;
-    position: relative;
+    margin: 20px;
+    overflow-y: hidden;
+    background-color: white;
 }
- 
-.cards-review > p{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+
+.cards-review>p {
     text-align: center;
-}
-
-.cards-review > img{
-    top: -20px;
-    width: 100%;
-    position: relative;
-    height: 30px;
-    justify-content: center;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 5px;
 }
 
-.review-body{
+.cards-review>img {
+    
+    width: 200px;
+    height: 30px;
+    display: block;
+}
+
+.review-body {
+    overflow-y: hidden;
+    width: 100vw;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    font-weight: lighter;
+    flex: 1 1 200px;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    align-content: center;
-    display: flex;
-    width: 100%;
-    padding: 20px;
-    height:200px;
-    font-weight: lighter;
 }
 
-.review-google{
-    display:table-cell;
+.review-google {
+    overflow-y: hidden;
+    display: flex;
+    animation: entrada1 350ms ease-in;
+    width: 100vw;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+
+.final-text{
+    display: flex;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    justify-content: center;
+    align-items: end;
+}
+
+
+/* sessão da galeria de fotos */
+
+.galeria{
     animation: entrada1 350ms ease-in;
     width: 100%;
-    height: 600px;
-
+    height: 400px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    
 }
 
+.galeria-span{
+    display: grid;
+    justify-content: center;
+    align-items:center;
+    align-content: center;
+    width: 100%;
+    height: 100px;
+}
+
+.galeria-span > a{
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+    border-radius: 20px;
+    width: 130px;
+    height: 35px;
+    top: 10px;
+    left: 50px;
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+    outline: 0;
+    color: white;
+    transition: 700ms;
+    font-size: 22px;
+}
+.galeria-span > a:hover{
+    transition: 400ms;
+    box-shadow: 2px 2px 5px 1px black;
+    
+}
+/* Endereço do site */
+
+
+.endereco{
+    animation: entrada1 350ms ease-in;
+    overflow-y: hidden;
+    width: 100vw;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.endereco-iframe{
+    display: flex;
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+.endereco-iframe> iframe{
+    width: 70%;
+
+    box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.664);
+    border-radius: 20px;
+}
 
 /* ANIMACAO DE ENTRADA DO SITE */
 @keyframes entrada1 {
@@ -237,19 +316,48 @@ header {
     }
 }
 
-@media screen and (min-width: 768px){
+@media screen and (min-width: 1350px) {
     .principal{
-        height: 400px;
+        
+        width: 100%;
+        height: 500px;
+        position: relative;
     }
-    .imagem{
-         height: 400px;
-    }
-    .container{
-        height: 400px;
-    }
-    .titulo{
-        height: 400px;
-        font-size: 120px; 
 
+    .container{
+       box-shadow: inset 1px 1px 10px 5px black;
+       display: flex;
+       height: 500px;
+       width: 100%;
+       position: relative;
+       
+} 
+
+    .imagem{
+        box-shadow: inset 0px 0px 0px 0px black;
+        width: 100%;
+        animation: alterar 0s infinite ease;
+        background-size: contain;
+        height: 300%;
+    } 
+
+    .titulo {
+        font-family: AntaraDistance;
+        height: 500px;
+        width: 100%;
+        font-size: 100px;
+        position: absolute;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+    
+
+    }
+}
+
+
+@media screen and (max-width: 768px){
+    .hide1{
+        display: none;
     }
 }
