@@ -13,8 +13,14 @@
     font-family: AntaraDistance;
     src: url(assets/font/aAntaraDistance.otf);
 }
+html{
+    scroll-behavior: smooth;
+}
 
-
+a{
+    text-decoration: none;
+    color: white;
+}
 body {
 
     background-color: rgb(240, 238, 238);
@@ -25,7 +31,9 @@ body {
 .menu {
     animation: entrada1 350ms ease-in-out;
     width: 100%;
+
 }
+
 
 .menu>.slogan-menu {
     width: 100%;
@@ -43,10 +51,61 @@ body {
 }
 
 .menu>.submenu {
+    display: flex;
+    justify-content: center;
     width: 100%;
+    align-items: center;
+    color: white;
     padding: 15px;
     background-color: black;
 }
+
+
+.menu-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.itens-submenu{
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+}
+
+.itens-submenu> li{
+    margin: 0 50px;
+}
+
+
+li{ cursor: pointer;}
+
+.menu-whatssap:hover{
+    box-shadow: #25d366 0px 0px 10px;
+    transition: 300ms ease-out;
+}
+
+.menu-whatssap> li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.menu-whatssap{
+    cursor: pointer;
+    transition: 500ms ease-out;
+    background-color: #1ca34d;
+    border-radius: 20px;
+    width: 120px;
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    align-items: center;
+}
+
 
 /*
 header {
