@@ -1,30 +1,49 @@
-var whatsapp = document.querySelector(".menu-whatsapp")
-var itemsubmenu = document.querySelector(".itens-submenu")
+const whatsapp = document.querySelector(".menu-whatsapp")
+const itemsubmenu = document.querySelector(".itens-submenu")
+const menu = document.querySelector('.submenu')
+
+// ---------------------------
+const testeButton = document.querySelector('.teste')
+const localizacao = document.querySelector('#localizacao');
 
 
-//Abrir e fechar nav menu
-function abrirFechar(){
-    var button = document.querySelector(".button-mobile")
-    
-    
+function abrirFecharMenu(){
 
-    if(itemsubmenu.classList.contains('open')){
-        itemsubmenu.classList.remove('open')
-        button.classList.remove('remove')
-        document.querySelector(".iconmobile").src = 'assets/img/icon/openIcon.svg'
-
+    if(testeButton){
+    testeButton.classList.toggle("active")
+    itemsubmenu.classList.toggle('open')
     }
-    else{
-        itemsubmenu.classList.add('open')
-        button.classList.remove('open')
-        document.querySelector(".iconmobile").src = 'assets/img/icon/closeIcon.svg'
+
+}
+
+function fechar(){
+    if(testeButton){
+        testeButton.classList.toggle('active')
+        itemsubmenu.classList.toggle('open')
     }
 }
 
-screen.addEventListener('onchange',()=>{
-    if(screen.availWidth <= 768){
+
+
+
+function mover(){
+    if(whatsapp && menu && itemsubmenu){
+
+    
+    if(window.innerWidth <= 768){
         itemsubmenu.appendChild(whatsapp)
-        console.log("dentro do if")
+
+    }else{
+        menu.appendChild(whatsapp)
     }
-    console.log("fora do if")
-});
+}
+    console.log('chamou ')
+}
+
+
+
+testeButton.addEventListener('click', abrirFecharMenu)
+localizacao.addEventListener('click', fechar)
+// Move o botão para dentro do submenu quando a janela for menor que 768px
+window.addEventListener('resize', mover);
+window.addEventListener('load', mover);
