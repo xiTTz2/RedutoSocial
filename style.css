@@ -513,6 +513,13 @@ header {
 }
 
 
+@media screen and (max-height: 575px){
+    .itens-submenu{
+        top:64px;
+    }
+}
+
+
 @media screen and (max-width: 768px) {
 
     .menu-titulo {

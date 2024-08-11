@@ -2,48 +2,51 @@ const whatsapp = document.querySelector(".menu-whatsapp")
 const itemsubmenu = document.querySelector(".itens-submenu")
 const menu = document.querySelector('.submenu')
 
-// ---------------------------
-const testeButton = document.querySelector('.teste')
+// botao de localização do site
+const menu_burguer = document.querySelector('.teste')
 const localizacao = document.querySelector('#localizacao');
 
+//Abrir e fechar o menu quando clicado
+function abrirFecharMenu() {
 
-function abrirFecharMenu(){
-
-    if(testeButton){
-    testeButton.classList.toggle("active")
-    itemsubmenu.classList.toggle('open')
+    if (menu_burguer) {
+        menu_burguer.classList.toggle("active")
+        itemsubmenu.classList.toggle('open')
     }
 
 }
 
-function fechar(){
-    if(testeButton){
-        testeButton.classList.toggle('active')
+//fechar o menu quando clicar no botão de localização
+function fechar() {
+    if (menu_burguer) {
+        menu_burguer.classList.toggle('active')
         itemsubmenu.classList.toggle('open')
     }
 }
 
 
 
+//Mover o botão whatssapp para dentro da div "item-submenu" quando entrar no modo celucar
+//E quando sair do modo celular o botão volta para a div "menu"
+function mover() {
+    if (whatsapp && menu && itemsubmenu) {
 
-function mover(){
-    if(whatsapp && menu && itemsubmenu){
 
-    
-    if(window.innerWidth <= 768){
-        itemsubmenu.appendChild(whatsapp)
+        if (window.innerWidth <= 768) {
+            itemsubmenu.appendChild(whatsapp)
 
-    }else{
-        menu.appendChild(whatsapp)
+        } else {
+            menu.appendChild(whatsapp)
+        }
     }
+
 }
-    console.log('chamou ')
-}
 
 
-
-testeButton.addEventListener('click', abrirFecharMenu)
+//Ativa as funções de abrir e fechar o menu e o botão localização
+menu_burguer.addEventListener('click', abrirFecharMenu)
 localizacao.addEventListener('click', fechar)
+
 // Move o botão para dentro do submenu quando a janela for menor que 768px
 window.addEventListener('resize', mover);
 window.addEventListener('load', mover);
