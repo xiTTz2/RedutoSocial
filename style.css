@@ -1,0 +1,604 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    text-decoration: none;
+    font-family: Helvetica;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: AntaraDistance;
+    src: url(assets/font/aAntaraDistance.otf);
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+
+    background-color: rgb(240, 238, 238);
+}
+
+/* MENU E OUTRAS COISAS DA PARTE SUPERIOR DO SITE */
+
+
+.menu {
+    animation: entrada1 350ms ease-in-out;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 100;
+}
+
+
+
+.menu>.slogan-menu {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    background-color: rgb(230, 150, 2);
+    display: flex;
+    justify-content: center;
+    z-index: 101;
+}
+
+.menu>.slogan-menu>h4 {
+    color: white;
+    font-family: 'Lucida Sans';
+    font-weight: lighter;
+    flex-wrap: nowrap;
+    letter-spacing: 3px;
+}
+
+.menu>.submenu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    color: white;
+    padding: 15px 0;
+    background-color: black;
+}
+
+
+.menu-titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 200px;
+    z-index: 101;
+    height: 60px;
+    margin-right: 50px;
+}
+
+.itens-submenu>a {
+    transition: 400ms;
+    display: flex;
+    /* justify-content: space-between; */
+    margin: 0 -38px;
+}
+
+.itens-submenu>a:hover {
+    transition: 400ms;
+    color: rgb(230, 150, 2);
+}
+
+.itens-submenu {
+    width: 60em;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+
+li {
+    cursor: pointer;
+}
+
+.menu-whatsapp>a:hover {
+    box-shadow: #25d366 0px 0px 10px;
+    transition: 300ms ease-out;
+}
+
+.menu-whatsapp > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 400px;
+    transition: 500ms ease-out;
+    background-color: #1ca34d;
+    border-radius: 20px;
+}
+
+.menu-whatsapp {
+    cursor: pointer;
+    height: 60px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    align-items: center;
+}
+
+
+/* Parte mobile do nav-menu */
+
+.mobile-list{
+    display: none;
+}
+
+.mobile-titulo{
+    display: none;
+}
+
+.teste{
+    cursor: pointer;
+    position: relative;
+    width: 70%;
+    outline: none;
+    text-decoration: none;
+    align-items: center;
+    display: none;
+    align-content: center;
+    height: 100%;
+    z-index: 115;
+    padding: 2px;
+}
+.barra{
+    display: block;
+    width: 35px;
+    height: 4px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+    z-index: 105;
+
+}
+
+
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: black;
+} 
+
+
+
+/* PARTE PRINCIPAL DE ENTRADA DO SITE*/
+.imagem {
+    box-shadow: inset 1px 1px 10px 5px black;
+    display: inline;
+    animation: alterar 16s infinite ease;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100%;
+}
+
+.img1 {
+
+    background-image: url("assets/img/restaurantefoto2/fotofundo3.jpg");
+}
+
+
+.img2 {
+
+
+    background-image: url("assets/img/restaurantefoto1/fotofundo2.jpg");
+}
+
+
+.img3 {
+
+
+    background-image: url("assets/img/restaurantefoto1/fotofundo3.jpg");
+}
+
+.titulo {
+    opacity: 0.7;
+    filter: blur(0.70px);
+    text-shadow: 2px 2px 6px black;
+    font-size: 85px;
+    color: white;
+    width: 100%;
+    align-items: center;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    z-index: 1;
+    font-family: AntaraDistance;
+}
+
+.principal {
+    overflow: hidden;
+    animation: entrada1 400ms ease;
+    width: 600%;
+    height: 100vh;
+}
+
+.container {
+    overflow: hidden;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/* PARTE DE AVALIACAO DO GOOGLE */
+#review-head {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#review-head>img {
+    margin-right: 15px;
+    width: 40px;
+    height: 40px;
+}
+
+
+.cards-review {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    width: 300px;
+    height: 200px;
+    font-family: 'Lucida Sans';
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 0px 10px 2px black;
+    margin: 20px;
+    overflow-y: hidden;
+    background-color: white;
+}
+
+.cards-review>p {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    margin: 5px;
+}
+
+.cards-review>img {
+
+    width: 200px;
+    height: 30px;
+    display: block;
+}
+
+.review-body {
+    overflow-y: hidden;
+    width: 100vw;
+    padding: 20px;
+    height: 100%;
+    display: flex;
+    font-weight: lighter;
+    flex: 1 1 200px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.review-google {
+    overflow-y: hidden;
+    display: flex;
+    animation: entrada1 350ms ease-in;
+    width: 100vw;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+
+.final-text {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    position: relative;
+    justify-content: center;
+    align-items: end;
+}
+
+
+/* sessão da galeria de fotos */
+
+.galeria {
+    animation: entrada1 350ms ease-in;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+}
+
+.galeria-span {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: 100px;
+}
+
+.galeria-span>a {
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+    border-radius: 20px;
+    width: 130px;
+    height: 35px;
+    top: 10px;
+    left: 50px;
+    position: relative;
+    align-items: center;
+    text-decoration: none;
+    outline: 0;
+    color: white;
+    transition: 700ms;
+    font-size: 22px;
+}
+
+.galeria-span>a:hover {
+    transition: 400ms;
+    box-shadow: 2px 2px 5px 1px black;
+
+}
+
+/* Endereço do site */
+
+
+.endereco {
+    animation: entrada1 350ms ease-in;
+    overflow-y: hidden;
+    width: 100vw;
+    height: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.endereco-iframe {
+    display: flex;
+    width: 100%;
+    height: 600px;
+    justify-content: center;
+    align-items: center;
+}
+
+.endereco-iframe>iframe {
+    width: 70%;
+
+    box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.664);
+    border-radius: 20px;
+}
+
+/* Botão whatsapp para redirecionar */
+
+.float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 40px;
+    right: 40px;
+    background-color: #25d366;
+    color: #FFFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 8px #00000085;
+    z-index: 10;
+    transition: 600ms;
+}
+
+.my-float {
+    margin-top: 16px;
+}
+
+.float:hover {
+    transition: 400ms;
+    transform: scale(1.10);
+    box-shadow: 2px 2px 4px 1px #1ca34d;
+}
+
+/* ANIMACAO DE ENTRADA DO SITE */
+@keyframes entrada1 {
+    0% {
+        transform: translateY(90px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+
+@keyframes alterar {
+    25% {
+        transform: translateX(0);
+    }
+
+    30% {
+        transform: translateX(-100%);
+    }
+
+    50% {
+        transform: translateX(-100%);
+    }
+
+    55% {
+        transform: translateX(-200%);
+    }
+
+    75% {
+        transform: translateX(-200%);
+    }
+
+    80% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@media screen and (min-width: 1350px) {
+    .principal {
+
+        width: 100%;
+        height: 500px;
+        position: relative;
+    }
+
+    .container {
+        box-shadow: inset 1px 1px 10px 5px black;
+        display: flex;
+        height: 500px;
+        width: 100%;
+        position: relative;
+
+    }
+
+
+    .imagem {
+        box-shadow: inset 0px 0px 0px 0px black;
+        width: 100%;
+        animation: alterar 0s infinite ease;
+        background-size: auto;
+        height: 300%;
+    }
+
+    .titulo {
+        font-family: AntaraDistance;
+        height: 500px;
+        width: 100%;
+        font-size: 100px;
+        position: absolute;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+
+
+    }
+}
+
+
+@media screen and (max-height: 575px){
+    .itens-submenu{
+        top:64px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .menu-titulo {
+        width: 100%
+    }
+    .menu-whatsapp{
+        width: 100%;
+        
+
+    }
+    .teste{
+        display: block;
+    }
+
+    .teste.active .barra:nth-child(1) {
+        opacity: 0;
+        z-index: 110;
+    }
+
+    .teste.active .barra:nth-child(2) {
+        transform: translateY(5px) rotate(45deg);
+        z-index: 110;
+        background-color: rgb(230, 150, 2);
+    }
+
+    .teste.active .barra:nth-child(3) {
+        transform: translateY(-5px) rotate(-45deg);
+        background-color: rgb(230, 150, 2)
+    }
+
+
+    .menu-whatsapp> a{
+        width: 400px;
+        height: 50px;
+        font-size: 30px;
+    }
+    .hide1 {
+        display: none;
+    }
+
+    .itens-submenu{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
+        height: 100vh;
+        position: fixed;
+        bottom: 0;
+        right: -300%;
+        z-index: 100;
+        background-color: black;
+        transition: all 0.4s ease-out;
+        box-shadow: 0 0 20px black;
+    }
+    
+
+    .itens-submenu > a{
+        margin: 40px 0;
+        align-items: center;
+        width: 100%;
+        justify-content: center;
+        font-size: 30px;
+    }
+    .mobile-titulo{
+        margin-bottom: 100px;
+
+        display: flex;
+    }
+    .open{ 
+        right: 0;
+        display: flex;
+    }
+
+
+    .titulo{
+        font-size: 80px;
+        height: 125%;
+        width: 100%;
+        
+    }
+
+}
