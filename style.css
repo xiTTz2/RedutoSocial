@@ -525,16 +525,16 @@ header {
 
 @media screen and (min-width: 1350px) {
     .principal {
-
+        margin-top: 115px;
         width: 100%;
-        height: 500px;
+        height: 600px;
         position: relative;
     }
 
     .container {
         box-shadow: inset 1px 1px 10px 5px black;
         display: flex;
-        height: 500px;
+        /* height: 500px; */
         width: 100%;
         position: relative;
 
