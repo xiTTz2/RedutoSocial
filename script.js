@@ -6,6 +6,8 @@ const menu = document.querySelector('.submenu')
 const menu_burguer = document.querySelector('.teste')
 const localizacao = document.querySelector('#localizacao');
 
+const celular_tela = 768
+
 //Abrir e fechar o menu quando clicado
 function abrirFecharMenu() {
 
@@ -32,7 +34,7 @@ function mover() {
     if (whatsapp && menu && itemsubmenu) {
 
 
-        if (window.innerWidth <= 768) {
+        if (window.innerWidth <= celular_tela) {
             itemsubmenu.appendChild(whatsapp)
 
         } else {
@@ -50,3 +52,38 @@ localizacao.addEventListener('click', fechar)
 // Move o botão para dentro do submenu quando a janela for menor que 768px
 window.addEventListener('resize', mover);
 window.addEventListener('load', mover);
+
+
+//Parte de deixar o nav menu transparente com efeito de blur
+const menuHeader2 = document.querySelector("header")
+
+
+function scrollFunciton() {
+    posicaoInicial = 0
+    ativado = false
+  
+
+    if (menuHeader2) {
+        if (window.screen.width > celular_tela) {
+            if (ativado == false) {
+                if (window.scrollY > posicaoInicial) {
+
+                    menuHeader2.classList.add("ativarFundo")
+                    ativado = true
+                }
+            }
+        }
+        if (window.scrollY == posicaoInicial) {
+            
+            menuHeader2.style.transition = '1.5s'
+            menuHeader2.classList.remove("ativarFundo")
+            ativado = false
+        }
+        if(window.length <= celular_tela){
+            ativado = false
+        }
+    }
+}
+
+
+window.addEventListener("scroll", scrollFunciton)

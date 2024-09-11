@@ -39,6 +39,16 @@
     transition: 600ms;
 }
 
+@media screen and (max-width: 768px){
+    .imgs-viewer> a > img{
+        width: 300px;
+        height: 300px;
+    }
+
+    
+    
+}
+
 
 .imgs-viewer > a > img:hover{
     transition: 400ms ease-out;
