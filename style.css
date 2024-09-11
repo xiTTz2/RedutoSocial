@@ -56,6 +56,20 @@ body {
     z-index: 101;
 }
 
+.menu-titulo {
+    
+    font-family: AntaraDistance;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 200px;
+   
+    z-index: 101;
+    height: 60px;
+    margin-right: 50px;
+}
+
 .menu>.slogan-menu>h4 {
     color: white;
     font-family: 'Lucida Sans';
@@ -75,16 +89,6 @@ body {
 }
 
 
-.menu-titulo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    width: 200px;
-    z-index: 101;
-    height: 60px;
-    margin-right: 50px;
-}
 
 .itens-submenu>a {
     transition: 400ms;
