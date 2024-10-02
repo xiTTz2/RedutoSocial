@@ -9,9 +9,17 @@
     overflow-x: hidden;
 }
 
+
 @font-face {
     font-family: AntaraDistance;
     src: url(assets/font/aAntaraDistance.otf);
+}
+
+
+
+@font-face {
+    font-family: Inter;
+    src: url(assets/font/Inter_18pt-Regular.ttf);
 }
 
 html {
@@ -219,9 +227,8 @@ header {
 
 
 .img2 {
-
-
-    background-image: url("assets/img/restaurantefoto1/fotofundo2.jpg");
+    
+    background-image: url("assets/img/restaurantefoto1/fundoteste.jpeg");
 }
 
 
@@ -496,6 +503,87 @@ header {
     justify-content: center;
     font-weight: bold;
     font-size: 30px;
+}
+
+/* sessão de buffet e marmita do site  */
+.centro
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.buffet{
+    width: 100vw;
+    height: 700px;
+    overflow: hidden;
+
+}
+.container-descricao{
+    height: 100%;
+    width: 600px;
+    display: grid;
+    justify-content: baseline;
+    letter-spacing: 3px;
+}
+.container-descricao > ul > li> p> img{
+    margin: 0px 20px;
+    width: 60px;
+    height: 60px;
+    
+}
+
+.container-descricao > ul > li{
+    text-decoration: none;
+    cursor: default;
+}
+
+.container-descricao > ul > li> p{
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: baseline;
+    margin: 10px;
+  
+}
+
+.descricao-buffet > h2{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 35px;
+    font-family: Inter;
+}
+
+.descricao-buffet{
+    width: 600px;
+    height: 500px;
+    padding: 10px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.233);
+    border-radius: 15px;
+}
+
+
+.imagem-slide{
+    margin: 60px;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px 2px rgba(0, 0, 0, 0.418);
+}
+
+.imgBuffet{
+    height: 500px;
+    width: 500px;
+    overflow: hidden;
+    background: linear-gradient(10deg, rgba(250,129,42,1) 0%, rgba(229,201,52,1) 100%);
+    border-radius: 10px;
 }
 
 /* Historia do site */
