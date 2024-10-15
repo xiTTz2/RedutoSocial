@@ -9,13 +9,10 @@
     overflow-x: hidden;
 }
 
-
 @font-face {
     font-family: AntaraDistance;
     src: url(assets/font/aAntaraDistance.otf);
 }
-
-
 
 @font-face {
     font-family: Inter;
@@ -51,9 +48,6 @@ body {
     position: fixed;
     z-index: 100;
 }
-
-
-
 .menu>.slogan-menu {
     width: 100%;
     padding: 10px;
@@ -118,7 +112,6 @@ body {
 
 }
 
-
 li {
     cursor: pointer;
 }
@@ -128,7 +121,7 @@ li {
     transition: 300ms ease-out;
 }
 
-.menu-whatsapp>a {
+.menu-whatsapp > a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -186,8 +179,6 @@ li {
 
 }
 
-
-
 header {
     width: 100%;
     display: flex;
@@ -199,43 +190,40 @@ header {
 
 /* Scroll animação  fundo transparente*/
 .ativarFundo {
-
     transition: ease-in-out;
     background: rgba(68, 68, 68, 0.486);
     backdrop-filter: blur(10px);
-
-
 }
-
-
 
 /* PARTE PRINCIPAL DE ENTRADA DO SITE*/
 .imagem {
-    box-shadow: inset 1px 1px 10px 5px black;
-    display: inline;
-    animation: alterar 14s infinite ease;
+    /* animation: alterar 14s infinite ease; */
     background-repeat: no-repeat;
     background-size: cover;
     width: 100vw;
-    height: 100%;
+    transform: translateX(-100%);
+    filter: blur(5px);
+    display: flex;
+    height: 800px;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
 }
 
 .img1 {
-
-    background-image: url("assets/img/restaurantefoto2/ambientesobremesa.jpg");
+    background-position: center ;
+    background-image: url("assets/img/restaurantefoto2/ambientesobremesateste.jpeg");
 }
-
 
 .img2 {
-
-    background-image: url("assets/img/restaurantefoto1/fotofundo2.jpg");
+    background-position: right center;
+    background-image: url("assets/img/restaurantefoto2/ambientebuffetnovo.jpeg");
 }
 
-
 .img3 {
-
-
-    background-image: url("assets/img/restaurantefoto2/ambiente1.jpg");
+    background-position: center;
+    background-image: url("assets/img/restaurantefoto2/ambienteteste.jpeg");
 }
 
 .titulo {
@@ -255,17 +243,18 @@ header {
 }
 
 .principal {
+    box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.329);
     overflow: hidden;
     animation: entrada1 400ms ease;
     width: 600%;
-    height: 100vh;
 }
-
-.container {
+.containerprincipal {
+    
     overflow: hidden;
     display: flex;
     width: 100%;
     height: 100%;
+
 }
 
 /* PARTE DE AVALIACAO DO GOOGLE */
@@ -309,8 +298,7 @@ header {
     margin: 5px;
 }
 
-.cards-review>img {
-
+.cards-review > img {
     width: 200px;
     height: 30px;
     display: block;
@@ -493,6 +481,12 @@ header {
     margin-bottom: 20px;
 }
 
+
+.Cartao>img {
+    /* display: flex; */
+    width: 140px;
+    height: 100px;
+}
 
 .pagamento>h2 {
     width: 100%;
@@ -696,10 +690,11 @@ footer {
     }
 }
 
+/* Formato para tela grande */
 @media screen and (min-width: 1350px) {
     .principal {
         margin-top: 115px;
-        width: 100%;
+        width: 100vw;
         height: 600px;
         position: relative;
     }
@@ -714,12 +709,17 @@ footer {
     }
 
 
+    .containerprincipal{
+        background-position: center;
+    }
+
+
     .imagem {
         box-shadow: inset 0px 0px 0px 0px black;
         width: 100%;
-        animation: alterar 0s infinite ease;
+        /* animation: alterar 0s infinite ease; */
         background-size: auto;
-        height: 300%;
+        transform: translateX(0%);
     }
 
     .titulo {
@@ -743,12 +743,41 @@ footer {
     }
 }
 
-
+/* Formato para celular */
 @media screen and (max-width: 768px) {
 
+    
 
+    .buffet{
+        height: 500px;
+    }
+
+    .descricao-buffet{
+        width: 340px;
+        height: 400px;
+        padding: 10px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0px 0px 60px 5px rgba(0, 0, 0, 0.233);
+        border-radius: 15px;
+    }
+
+    .container-descricao>ul>li>p>img {
+        margin: 0px 20px;
+        width: 50px;
+        height: 50px;
+    }
+    
+    .imagem{
+        background-size: cover;
+        height: 100vh;
+        background-position: right center;
+
+    }
+    
     .container-descricao>ul>li>p {
-        font-size: 18px;
+        font-size: 15px;
     }
 
 
@@ -869,5 +898,37 @@ footer {
         width: 100%;
 
     }
+
+}
+
+
+/* Mudar tema automático para o usuario que usa tema escuro ou tema claro */
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(67, 63, 70);
+        color: white;
+    }
+
+    .review-body {
+        color: black;
+    }
+
+    .final-text {
+        color: white;
+    }
+
+
+    .container-descricao>ul>li>p>img {
+        filter: invert(1);
+
+    }
+
 
 }

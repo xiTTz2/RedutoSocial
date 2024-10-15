@@ -110,4 +110,22 @@ header{
     }
 }
 
+/* Trocar o tema entra claro e escuro */
+
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: white;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: rgb(67, 63, 70);
+        color: white;
+    }
+
+    
+
+}
+
 

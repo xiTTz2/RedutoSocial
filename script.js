@@ -59,15 +59,15 @@ const menuHeader2 = document.querySelector("header")
 
 
 function scrollFunciton() {
-    posicaoInicial = 0
-    ativado = false
+    const posicaoInicial = 0
+    var ativado = false
   
 
     if (menuHeader2) {
         if (window.screen.width > celular_tela) {
             if (ativado == false) {
                 if (window.scrollY > posicaoInicial) {
-
+                    menuHeader2.style.transition = '1.5s'
                     menuHeader2.classList.add("ativarFundo")
                     ativado = true
                 }
