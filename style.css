@@ -40,9 +40,6 @@ body {
 .menu {
     animation: entrada1 350ms ease-in-out;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     align-content: center;
     flex-wrap: wrap;
     position: fixed;
@@ -203,10 +200,6 @@ header {
     width: 100vw;
     transform: translateX(-100%);
     filter: blur(5px);
-    display: flex;
-    height: 800px;
-    justify-content: center;
-    align-content: center;
     flex-wrap: nowrap;
     align-items: center;
 }
@@ -247,6 +240,7 @@ header {
     overflow: hidden;
     animation: entrada1 400ms ease;
     width: 600%;
+    height: 100vh;
 }
 .containerprincipal {
     
@@ -390,9 +384,6 @@ header {
     overflow-y: hidden;
     width: 100vw;
     height: 700px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
 }
 
@@ -464,9 +455,6 @@ header {
 
 .pag>p {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     font-weight: bold;
 }
 
@@ -511,6 +499,7 @@ header {
     height: 700px;
     overflow: hidden;
     flex-wrap: wrap;
+    animation: entrada1 350ms ease-in;
 }
 
 .container-descricao {
@@ -584,10 +573,7 @@ header {
 /* Historia do site */
 
 .historia {
-    display: flex;
     width: 100vw;
-    justify-content: center;
-    align-items: center;
     flex-wrap: nowrap;
     height: 700px;
     animation: entrada1 350ms ease-in;
@@ -603,8 +589,6 @@ header {
     text-shadow: 0 0px 1px black;
     border-radius: 40px;
     width: 1000px;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     height: 500px;
     animation: entrada1 350ms ease-in;
@@ -612,14 +596,11 @@ header {
 
 .container_historia {
     padding: 50px;
-    display: flex;
     font-size: 25px;
     text-align: justify;
     text-shadow: 0 0px 1px black;
     border-radius: 40px;
     width: 1000px;
-    justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
     height: 500px;
 
@@ -743,13 +724,20 @@ footer {
     }
 }
 
+
+@media screen and (max-width: 1024px){
+    .imagem-slide{
+        display: none;
+    }
+}
+
 /* Formato para celular */
 @media screen and (max-width: 768px) {
 
     
 
     .buffet{
-        height: 500px;
+        height: 600px;
     }
 
     .descricao-buffet{
